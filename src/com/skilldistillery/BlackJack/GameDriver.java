@@ -8,19 +8,20 @@ public class GameDriver {
 	
 	public static void main(String[] args) {
 		Game game = new Game();
-		// game driver starts a new game
+		// game driver says to start a new game.
 		System.out.println("Welcome. Let's play some BlackJack.");
 		
-		//<-----over to Dealer to shuffle and deal hands
+		//<------- calls over to Game class to do 
+		game.startNewGame();
 		
-		System.out.println("You have " + );//???
+		
+	
+		
 		
 		//Deck d = new Deck(gd.displayDeck());
 
 		//System.out.println(d);
 		
 	}
-	
-	close.???
 
 }

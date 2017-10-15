@@ -5,17 +5,14 @@ public class Player {
 	Hand hand; //declare field of type Hand
 	
 	public Player () { // no args constructor
-		
+		hand = new Hand();
 	}
 	
-	public Player(Hand hand) { //constructor using fields
-		this.hand = hand;
-	}
 	
 
-	public int addCardToHand (Card card) {
+	public void addCardToHand (Card card) {
 		hand.addCardToHand(card);
-		return hand.get(0).getRank().getValue();
+	
 	}
 	
 

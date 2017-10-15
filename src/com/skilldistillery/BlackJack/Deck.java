@@ -37,9 +37,9 @@ public class Deck {
 
 	public void shuffleDeck() {
 		Collections.shuffle(deck);
-		for (Card card : deck) {
-			System.out.println("******Shuffled Deck********");
-			System.out.println(card);
+		System.out.println("******Deck is Shuffled********");
+		for (int i = 0; i < 10; i++) {
+			System.out.println(deck.get(i).toString());
 		}
 	}
 }

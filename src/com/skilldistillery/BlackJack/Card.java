@@ -25,7 +25,7 @@ public class Card {
 		StringBuilder builder = new StringBuilder();
 		builder.append(rank);
 		builder.append(" of ");
-		builder.append(suit);
+		builder.append(suit.pic);
 		return builder.toString();
 	}
 

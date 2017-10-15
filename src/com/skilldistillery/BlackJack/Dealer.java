@@ -1,11 +1,12 @@
 package com.skilldistillery.BlackJack;
 
-public class Dealer {
+public class Dealer  {
 	Hand hand; //field variables for Hand object and Deck object
 	Deck deck;
 	
 	public Dealer() { //no args constructor
-		this.deck = new Deck();
+		deck = new Deck();
+		hand = new Hand();
 	}
 	
 	public Dealer(Hand hand, Deck deck) { //constructor w/ hand & deck
@@ -19,8 +20,20 @@ public class Dealer {
 	
 	public Card drawCard() {
 		return deck.removePlayedCardFromDeck();
-		
 	}
+	
+	public void addCardToHand (Card card) {
+		hand.addCardToHand(card);
+	}
+	
+	public int getInitialValueOfHand() {
+		return getHand().getHand().get(0).getRank().getValue();	
+		}
+		
+//		for (int i = 0; i < this.hand.size(); i++) {
+//			initialHandValue = hand.getRank(0).getValue();
+//		}
+	
 
 	public Hand getHand() {
 		return hand;

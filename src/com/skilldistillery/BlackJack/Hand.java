@@ -30,7 +30,26 @@ public class Hand {
 		}
 		System.out.println(handValue);
 		return handValue;
+	
 	}
+	
+	public int getHandSize() {
+//		int handSize = 0;
+//		handSize = hand.size();
+//	return handSize;
+		return hand.size();
+	}
+	
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Hand: ");
+		builder.append(hand);
+		return builder.toString();
+	}
+	
+	
 	
 	//will need to make a new hand for Player of cards 1 and 3 from deck
 	
