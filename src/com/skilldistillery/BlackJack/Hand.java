@@ -28,7 +28,6 @@ public class Hand {
 			handValue += hand.get(i).getRank().getValue();
 			
 		}
-		System.out.println(handValue);
 		return handValue;
 	
 	}
