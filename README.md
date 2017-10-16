@@ -1,15 +1,16 @@
-#BlackJack
+# BlackJack
 
 Built a BlackJack game with dealer and one player
 
-###Implemented the following:
+### Implemented the following:
 
-*Enums with multiple parameters
-*Objects
-*JUnit Test
-*Methods (could have used more in Game logic, but I was having trouble getting them to work)
+- Enums with multiple parameters
+- Objects
+- JUnit Test
+- Methods (could have used more in Game logic, but I was having trouble getting them to work)
+- Loops
 
-###Used the following classes:
+### Used the following classes:
 
 - Rank (Enum)
 - Suit (Enum)
