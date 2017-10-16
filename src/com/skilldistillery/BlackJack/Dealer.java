@@ -30,11 +30,6 @@ public class Dealer  {
 		return getHand().getHand().get(0).getRank().getValue();	
 		}
 		
-//		for (int i = 0; i < this.hand.size(); i++) {
-//			initialHandValue = hand.getRank(0).getValue();
-//		}
-	
-
 	public Hand getHand() {
 		return hand;
 	}
