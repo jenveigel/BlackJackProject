@@ -60,6 +60,7 @@ public class Game {
 		if (hitStayChoice.equals("0")) {
 			System.out.println("You have chosen to stay at " + player.getHand().calculateValueOfHand());
 		} else if (hitStayChoice.equals("1")) {
+			
 			do { 
 			player.addCardToHand(dealer.drawCard());
 			System.out.println("\nPlayer " + player.getHand().toString());
@@ -72,34 +73,36 @@ public class Game {
 				System.out.println("BUST! Dealer wins. :(");
 				System.exit(0);
 			} else if (player.getHand().calculateValueOfHand() < 21) {		
-//					System.out.println("\nPlayer " + player.getHand().toString());
 					System.out.println("\nEnter \"1\" to Hit or \"0\" Stay?");
 					hitStayChoice = kb.next();
+					if (hitStayChoice.equals("0")){
+						System.out.println("You have chosen to stay at " + player.getHand().calculateValueOfHand());
+					}
 				} 
-			}while (player.getHand().calculateValueOfHand() < 21);
+			}while (hitStayChoice.equals("1"));
 
-			// } else if (hitStayChoice.equals("0")) {
-			// System.out.println("You have chosen to stay at " +
-			// player.getHand().calculateValueOfHand());
 		}
 
 		System.out.println("");
 	}
 
 	public boolean dealerHitStay() {
+		System.out.println("\nDealer " + dealer.getHand().toString() + "]");
+		System.out.println("Dealer's total is " + dealer.getHand().calculateValueOfHand());
 		while (dealer.getHand().calculateValueOfHand() <= 16) {
+			System.out.println("Dealer Hits");
 			dealer.addCardToHand(dealer.drawCard());
-			System.out.println(dealer.getHand().toString());
+			System.out.println("\nDealer " + dealer.getHand().toString() + "]");
+			System.out.println("Dealer's total is " + dealer.getHand().calculateValueOfHand());
 			if (dealer.getHand().calculateValueOfHand() > 21) {
 				System.out.println("Dealer busted. You win!");
 			}
 		}
-		System.out.println("Dealer's total is " + dealer.getHand().calculateValueOfHand());
 		if (dealer.getHand().calculateValueOfHand() > player.getHand().calculateValueOfHand()) {
-			System.out.println("Dealer wins.");
+			System.out.println("\nDealer wins.");
 		}
 		if (dealer.getHand().calculateValueOfHand() < player.getHand().calculateValueOfHand()) {
-			System.out.println("You Win!");
+			System.out.println("\nYOU WIN!");
 		}
 		if (dealer.getHand().calculateValueOfHand() == player.getHand().calculateValueOfHand()) {
 			System.out.println("Push...or...it would be a Push if you were betting money.");
